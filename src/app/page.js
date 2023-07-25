@@ -58,12 +58,13 @@ useEffect(() =>{
       {isLoading && (
         <p className="display-6 text-center fst-italic my-4">Loading ...</p>
       )}
-      {users && !isLoading && users.map((users) => (
+      {users && !isLoading && users.map((users,i) => (
          <UserCard 
+         key={i}
          name={users.name} 
          imgUrl={users.imgUrl} 
          address={users.address} 
-         key={users.email} />
+         email={users.email} />
       ))}
     </div>
   );
