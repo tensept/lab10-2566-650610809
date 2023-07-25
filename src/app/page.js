@@ -63,7 +63,7 @@ useEffect(() =>{
          name={users.name} 
          imgUrl={users.imgUrl} 
          address={users.address} 
-         email={users.email} />
+         key={users.email} />
       ))}
     </div>
   );
